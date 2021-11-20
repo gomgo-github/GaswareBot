@@ -1,0 +1,18 @@
+{
+  "name": "gomgobot",
+  "version": "1.0.0",
+  "description": "El bot oficial de Gomgo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gomgo-github"
+  },
+  "author": "Gomgo",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
