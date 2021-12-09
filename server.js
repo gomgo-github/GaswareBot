@@ -1,4 +1,4 @@
-const { Discord, Client, Prefix, Token, HelpMenu, PromoMenu, YouTubeMenu, InstagramMenu, WebMenu, TwitterMenu } = require("./Modulos/Variables.js")
+const { Discord, Client, Prefix, Token, HelpMenu, PromoMenu, YouTubeMenu, InstagramMenu, WebMenu, TwitterMenu, CPPPricing, CPricing, PyPricing, DDPricing, VEPricing, WebDevPricing, Cursos } = require("./Modulos/Variables.js")
 
 var http = require('http');  
 http.createServer(function (req, res) {   
@@ -18,8 +18,13 @@ Client.on('ready', () => {
 })
 
 Client.on('message', message => {
+    
     const args = message.content.slice(Prefix.length).trim().split(' ');
     const command = args.shift()
+    if(message.channel.id == "910254745975943208" || message.channel.id == "914593976458293258"){
+      message.react('👍');
+    }
+    //Reacciona con :+1: a todos los mensajes de #noticias
     if (!message.content.startsWith(Prefix) || message.author.bot || message.channel instanceof Discord.DMChannel ) return;
 
     switch(command.toLowerCase()){
@@ -42,14 +47,63 @@ Client.on('message', message => {
             message.channel.send(YouTubeMenu)
             break               
         case "price":
-            message.channel.send("Perdon, eso aún no lo sé")
+            if(args == "C++"){
+              message.channel.send(CPPPricing)
+              break
+            }
+            if(args == "C"){
+              message.channel.send(CPricing)
+              break
+            }
+           if(args == "Python"){
+              message.channel.send(PyPricing)
+              break
+            }
+           if(args == "EdicionDeVideo"){
+              message.channel.send(VEPricing)
+              break
+            }
+           if(args == "Web"){
+              message.channel.send(WebDevPricing)
+              break
+            }
+            if(args == "2D"){
+              message.channel.send(DDPricing)
+              break
+            }
+            if(args == "WebDev"){
+              message.channel.send(WebDevPricing)
+              break
+            }
+            if(args == "all"){
+              message.channel.send(CPPPricing)
+              message.channel.send(CPricing)
+              message.channel.send(PyPricing)
+              message.channel.send(VEPricing)
+              message.channel.send(WebDevPricing)
+              message.channel.send(DDPricing)
+              break
+            }
+            if(args == "todos"){
+              message.channel.send(CPPPricing)
+              message.channel.send(CPricing)
+              message.channel.send(PyPricing)
+              message.channel.send(VEPricing)
+              message.channel.send(WebDevPricing)
+              message.channel.send(DDPricing)
+              break
+            }
+            if(args == "" || args == null){
+              message.reply(Cursos)
+              break
+            }
+            message.reply("Has solicitado un curso que no existe, prueba a escribirlo de nuevo o contacta con el Staff")
             break
-        case "staff":
-            message.channel.send("WIP")
-            break
+            
         case "bug":
             message.channel.send("Woah! Has encontrado un bug, por favor contactame cuanto antes @GlueDevs™ Ltd.#6154")
             break
+        
     }
 
 })

@@ -1,7 +1,7 @@
 {
-  "name": "gomgobot",
+  "name": "gaswarebot",
   "version": "1.0.0",
-  "description": "El bot oficial de Gomgo",
+  "description": "El bot de Gasware Programming",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
