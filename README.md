@@ -1,9 +1,7 @@
 # Gasware Bot (Slash Commands)
 #### ESTA INSTANCIA DEBE EJECUTARSE JUNTO A GaswareBot PARA FUNCIONAR
 
-HelpMenu, PromoMenu, YouTubeMenu, InstagramMenu, WebMenu, TwitterMenu, CPPPricing, CPricing, PyPricing, DDPricing, VEPricing, WebDevPricing, Cursos
-
-Un Bot para el Servidor de Gasware Programming
+Un servicio de `Slash Commands` para el Bot del Servidor de Gasware Programming
 
 El Token del Bot es: Lo puse en un Github Secret pq tengo q tener el Repo abierto para repl.it
 
